@@ -1,0 +1,200 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/backimage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    background-attachment: fixed; /* Keep the background image fixed while scrolling */
+}
+
+
+
+
+header {
+
+    text-align: center;
+    padding: 1.5em;
+    display: flex;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+#header-image {
+    grid-column: 1; 
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+    grid-column: 2;
+}
+
+
+
+nav {
+    padding-left: 1.5em;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+ul {
+    padding: 0; /* Add this line */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Spread items evenly */
+}
+
+li {
+    margin-right: 20px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    position: relative;
+}
+
+main {
+    margin-top: 2em;
+    margin-left: 1.6em;
+    margin-right: 2em;
+    padding-bottom: 2em;
+    text-align: justify;
+    min-height: 28em;
+}
+
+.intro-link {
+    margin-top: 2em;
+}
+
+
+.intro-socials {
+    margin-top: 4em;
+}
+.social-icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+.social-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-top: 4em;
+    grid-gap: 1em;
+
+}
+
+
+
+/* Media query for larger screens (PC) */
+@media (min-width: 768px) {
+    header {
+        padding: 2em;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+    
+    img {
+        width: 80px;
+        
+    }
+
+    a {
+        font-size: 20px; /* Increase font size for PC */
+    }
+    
+    .intro-link {
+        display: inline-block;
+        width: 500px;
+        
+        
+    }
+
+    .intro-text { 
+        display: inline-block;
+        margin-right: 11em;
+        width: 530px;
+    }
+
+   
+    p {
+        font-size: 20px;
+    }
+
+    body {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+        
+    .intro-connect {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    a::before {
+        content: ''; /* Create a pseudo-element */
+        position: absolute;
+        width: 100%;
+        height: 2px; /* Set the height of the underline */
+        bottom: 0;
+        left: 0;
+        background-color: #ffffff; /* Color of the underline */
+        transform: scaleX(0); /* Initially set the width to zero for the animation effect */
+        transform-origin: bottom right;
+        transition: transform 0.3s ease; /* Add transition for the animation effect */
+    }
+    
+    a:hover::before,
+    a:focus::before {
+        transform: scaleX(1); /* Expand the width on hover or focus */
+        transform-origin: bottom left;
+    }
+    
+    
+    
+}
+@media (max-width: 768px) {
+    .navlink {
+        border-bottom: 2px solid #ececec;
+    }
+
+    .intro-connect {
+        margin-top: 2em;
+        display: grid;
+        grid-column: 1fr 1fr;
+    }
+}
+
+
+footer {
+    text-align: center;
+    padding-bottom: 1em;
+    bottom: 0;
+    width: 100%;
+  }
+
+
